@@ -58,6 +58,44 @@
                 </div>
               </div>
     </div>
+      <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+            
+            <h1 class="my-4">Formulario de Contacto</h1>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="apellido"><i class="bi bi-person"></i> Apellido</label>
+                <input type="text" class="form-control" id="apellido" name="apellido" required>
+              </div>
+              <div class="form-group">
+                <label for="email"><i class="bi bi-envelope"></i> Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="telefono"><i class="bi bi-telephone"></i> Telefono</label>
+                <input type="number" class="form-control" id="telefono" name="telefono" required>
+              </div>
+              <div class="form-group">
+                <label for="provincia"><i class="bi bi-geo-alt"></i> Provincia</label>
+                <select class="form-control" id="provincia" name="provincia" required>
+                  <option value="">Seleccione una provincia</option>
+                  <option value="Buenos Aires">Buenos Aires</option>
+                  <option value="Córdoba">Córdoba</option>
+                  <option value="Santa Fe">Santa Fe</option>
+                  <option value="Mendoza">Mendoza</option>
+                  <option value="Entre Ríos">Entre Ríos</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="comentario"><i class="bi bi-chat-right-text"></i> Comentario</label>
+                <textarea class="form-control" id="comentario" name="comentario" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary"><i class="bi bi-arrow-right"></i> Enviar Consulta</button>
+            </form>
+            <div id="response-message" class="my-3"></div>
+          </div>
+          </div>  
   </header>
   <main>
     <!--Presentación de la Empresa-->
@@ -120,7 +158,8 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script type="text/javascript" language="javascript">
-  //PERSONAL
+  //PERSONAL 
+ // Esto deberiamos ponerlo en un documento aparte con ruta "./js/tpG3.js"
     $(document).ready(function() {
             $.get("https://reqres.in/api/users?page=1&per_page=3", function(response) {
                 // .each (itera sobre la matriz data).
@@ -136,6 +175,34 @@
                 });
             });
         });   
+  // form 
+$(document).ready(function() {
+  $('#contact-form').submit(function(e) {
+    e.preventDefault();
+    var form = $(this);
+    var url = form.attr('action') || '#';
+    var method = form.attr('method') || 'POST';
+    var data = form.serialize();
+
+    $.ajax({
+      url: url,
+      type: method,
+      data: data,
+      success: function(response) {
+        $('#contact-form').hide();
+        $('#response-message').html('<p class="alert alert-success"><i class="bi bi-check-circle"></i> Se envió su consulta</p><button class="btn btn-primary" id="reset-btn"><i class="bi bi-arrow-repeat"></i> Enviar otra consulta</button>');
+      },
+      error: function(xhr, status, error) {
+        $('#response-message').html('<p class="alert alert-danger"><i class="bi bi-exclamation-circle"></i> Error al enviar la consulta</p>');
+      }
+    });
+  });
+
+  $(document).on('click', '#reset-btn', function() {
+    $('#contact-form').show();
+    $('#response-message').html('');
+  });
+});
 </script>
 <script src="./js/tpG3.js" charset="utf-8"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
