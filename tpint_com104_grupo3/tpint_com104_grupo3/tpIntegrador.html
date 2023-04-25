@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="./css/tpG3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trabajo Practico Integral com104 Grupo 3</title>
+</head>
+<body>
+  <header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+              <!-- (LOGO) -->
+            </div>
+          <div class="col-md-6">
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                        <li class="nav-item">
+                      <a class="nav-link boton1" href="#">boton 1</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link boton2" href="#">boton 2</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link boton3" href="#">boton 3</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+            <button id="loginButton" type="button">
+              <i class="bi bi-box-arrow-in-right"></i>
+              Log In</button>
+            </div>
+            <div id="loginModal" class="modal">
+              <div class="modal-content">
+                <h2>Iniciar sesión</h2>
+                <form>
+                  <label for="username"><i class="bi bi-person"></i> Usuario:</label>
+                  <input type="text" id="username" name="username">
+                  <label for="password"><i class="bi bi-lock"></i> Contraseña:</label>
+                  <input type="password" id="password" name="password">
+                  <button type="submit"> <i class="bi bi-arrow-right-circle"></i>
+                    Enviar</button>
+                  <button class="close">
+                    <i class="bi bi-x"></i>
+                    Cerrar </button>
+                </form>
+                </div>
+              </div>
+    </div>
+  </header>
+  <main>
+    <!--Presentación de la Empresa-->
+    <div class="row">
+      <div class="col-md-12 ">
+      <h1>Argentina Turismo</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+      <p>Argentina es, con 6 759 000 turistas en 2017 según la
+      Organización Mundial del Turismo, el país más visitado de Sudamérica y el
+      segundo más visitado de toda América Latina después de México.</p>
+      </div>
+      <div class="col-md-6">
+      <p>Por ello hemos creado una pagina recopilando recomendaciones personales
+      de los locales de distintos rincones de la Argentina.</p>
+      </div>
+    </div>
+    <!-- La idea sería un section cada uno? -->
+    <!--Personal-->
+    <section>
+      <div class="row" id="personal">
+        <div class="col-8">
+          <h2>Personal</h2>
+          <ul id="usuarios"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+    <p>section 2</p>
+    </section>
+
+    <section>
+    <p>section 3</p>
+    </section>
+
+    <section>
+    <p>section 4</p>
+    </section>
+
+    <section>
+    <p>section 5</p>
+    </section>
+
+    <section>
+    <p>section 6</p>
+    </section>
+
+  </main>
+       
+        <footer>
+        <p>Enlaces: Terminos y condiciones | contactenos (Ubicados a la izquierda) </p>
+        <hr>
+        <p>Iconos de redes sociales: Facebook | Instagram (Ubicados a la derecha)</p>
+        </footer>
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript" language="javascript">
+  //PERSONAL
+    $(document).ready(function() {
+            $.get("https://reqres.in/api/users?page=1&per_page=3", function(response) {
+                // .each (itera sobre la matriz data).
+                $.each(response.data, function(index, user) {
+                    // Se crea una variable HTML para cada objeto y se le añade una clase
+                    var avatar = $("<img>").attr("src", user.avatar).addClass("avatar");
+                    var name = $("<h4>").text(user.first_name + " " + user.last_name).addClass("nombre");
+                    var email = $("<p>").text(user.email).addClass("email");
+                    // Se crea un elemento <div> que contiene las variables anteriores.
+                    var userDiv = $("<div>").addClass("user").append(avatar, name, email);
+                    // La variable userDiv se añade al id "usuarios"
+                    $("#usuarios").append(userDiv);
+                });
+            });
+        });   
+</script>
+<script src="./js/tpG3.js" charset="utf-8"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</body>
+</html>
