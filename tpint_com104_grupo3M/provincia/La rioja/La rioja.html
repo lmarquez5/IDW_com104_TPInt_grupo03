@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>La rioja</title>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    nav li {
+      margin: 0 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+    }
+    nav a:hover {
+      color: #f00;
+    }
+  </style>
+</head>
+<body>
+  
+
+        <header>
+            <div class="wrapper">
+                <nav>
+                    <div class="logo"></div>
+
+                    <ul>
+                        <li>
+                            <a href="../../Index.html"> <font color="white"> Inicio</font></a>
+                        </li>
+
+                        <li>
+                            <a href="../tucuman/tucuman.html"><font color="white">Tucuman</font></a>
+                        </li>
+
+                        <li>
+                           <a href="../San juan/San juan.html"><font color="white">San Juan</font></a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- End of deskto navigation menu -->
+
+                <div class="hero-section">
+                    <div class="top">
+                        <h1>La Rioja te espera</h1>
+
+                        <p>
+                            Tierra de historia, cultura y belleza natural.
+                        </p>
+                            <div class="images-icons">
+                                <div>
+                                    <img src="images/geo icon.svg" alt="geo">
+                                    <h3>Capital</h3>
+                                    <h4>La Rioja</h4>
+                                </div>
+                                <div>
+                                    <img src="images/persona icon.svg" alt="persona">
+                                    <h3>Habitantes</h3>
+                                    <h4>384.607</h4>
+                                </div>
+                                <div>
+                                    <img src="images/globo icon.svg" alt="globo">
+                                    <h3>Superficie</h3>
+                                    <h4>89.680 Km²</h4>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="bottom">
+                        <img src="images/la rioja logo.png" alt="">
+
+                        <p>
+                            En nuestro suelo nacieron y defendieron el ideario federal Facundo Quiroga y el Chacho Peñaloza. También fuimos la cuna de prominentes educadores como Joaquín V. González y Rosario Vera Peñaloza.
+                        </p>
+
+                        <a href="https://www.larioja.gov.ar/" class="btn blue" id="myButton">Ir al sitio web</a>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- End of the header section -->
+
+        <div class="wrapper">
+            <section class="destacado-section">
+                <h2>Destacado</h2>
+
+                <div>
+                    <div class="place-card">
+                        <a href="https://turismo.larioja.gob.ar/experiencias-imperdibles/">
+                            <div class="content">
+                              <img src="images/pic 1.png" alt="">
+                              <div class="info">
+                                <h3>Parque Geológico Sanagasta</h3>
+                                <p class="description">
+                                  Un recorrido para dimensionar tiempos milenarios y observar fósiles de nidadas de dinosaurios y plantas.
+                                </p>
+                              </div>
+                            </div>
+                          </a>                          
+                      
+                      <div class="place-card">
+                        <a href="https://www.argentina.gob.ar/la-rioja/caudillos">
+                            <div class="content">
+                              <img src="images/pic 2.png" alt="">
+                              <div class="info">
+                                <h3>Museo de los Caudillos</h3>
+                                <p class="description">
+                                    Un espacio histórico en el que tuvo lugar el primer encuentro entre Facundo Quiroga y el Chacho Peñaloza.
+                                </p>
+                              </div>
+                            </div>
+                          </a> 
+                      </div>
+                      
+                      <div class="place-card">
+                        <a href="https://www.argentina.gob.ar/la-rioja/mur">
+                            <div class="content">
+                              <img src="images/pic 2.png" alt="">
+                              <div class="info">
+                                <h3>Museo de Rosarito</h3>
+                                <p class="description">
+                                    Un homenaje a Rosario Vera Peñaloza, Maestra de la Patria, en la antigua casa Vera Vallejo.
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                      </div>                                            
+                </div>
+            </section>
+
+            <!-- End of place-card section -->
+        </div>
+
+        <footer>
+            <section class="contacto-section">
+                <h2>Contacto</h2>
+
+                <p>
+                    Dirección: 25 de Mayo y San Nicolás de Bari, Ciudad de La Rioja. <br>
+                    Código postal: 5300 <br>
+                    Teléfono: (54 380) 4453156 <br>
+                    Correo electrónico: info@larioja.gob.ar
+                </p>
+
+                <p class="coyright">
+                    This website is developed by Imanol Iturrieta © 2023
+                </p>
+            </section>
+
+            <!-- End of contacto section -->
+        </footer>
+
+        <script src="main.js"></script>
+    </body>
+</html>

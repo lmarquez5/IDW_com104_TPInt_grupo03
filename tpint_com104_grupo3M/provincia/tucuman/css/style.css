@@ -1,0 +1,125 @@
+/*ESTILO SECTION*/
+.parte-uno{
+    background-image: url(../img/tucuman-portada.jpg);
+    width: 90vw;
+    padding: 1em;
+    margin: auto;
+}
+.parte-dos,section{
+   background-color: #183B59;
+    width: 100%;
+    padding: 2em;   
+}
+h1{
+    text-align: center;
+    color:  #183B59;
+    padding: 0.5em;
+}
+p{
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em;
+    color: cornflowerblue;
+}
+h3{
+    text-align: center;
+    color:  #608BA6;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+ol,li{
+    text-align: justify;
+    font-weight: bold;
+    background-color: #608BA6 ;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+ol{
+    color:#BFBFBF;
+}
+.iconos{
+    text-align: center;
+    background-color: aliceblue;
+    margin: auto;
+}
+
+/*ESTILOS PAGINAS TURiSTICAS*/
+.main1,.titulo{
+    color:#183B59;
+}
+.pmuseo{
+    color: #608BA6;
+    margin: 3em;
+}
+.main1{
+    background-color: #BFBFBF;
+    width:100%;
+    padding: 2em;
+}
+.lista{
+   background-color: #BF9039;
+   width: 90vw;
+}
+.imgg{
+    width: 100%;
+    height: 100%;
+}
+.imgmu{
+    width: 90vw;
+    height: 80vh;
+}
+.card-body{
+    width: 90vw;
+    background-color: #D9B23D;
+}
+.list-group-item{
+    width: 90vw;
+}
+.main1,h5{
+    text-align: center;
+}
+.main1,p{
+    color: #183B59;
+}
+/*ESTILO ARTICULO ULTIMA PAGINA TURISMO*/
+#cardbody{
+    width: 100%; 
+}
+.contenido{
+   margin-left: 0.3em;
+}
+.card-body2{
+    width: 50vw;
+}
+.card-group{
+    width:80%;
+    margin: auto;
+}
+
+
+
+/*ESTILOS GOOGLEFONTS*/
+
+
+@font-face{/*Titulos*/
+    font-family: Nunito-black;
+    src: url("../fonts/Nunito-Black.ttf");
+}
+h1{
+    font-family:Nunito-black;
+    font-size: 40px;
+}
+
+
+@font-face{/*Subtitulos*/
+    font-family:Nunito-Extralight ;
+    src: url("../fonts/Nunito-ExtraLight.ttf");
+}
+
+
+
+
+
+
+

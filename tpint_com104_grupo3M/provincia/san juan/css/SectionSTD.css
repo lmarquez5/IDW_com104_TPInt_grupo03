@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&family=Open+Sans:ital@1&display=swap');   
+.std{
+background-color: #D9B23D;
+}  
+
+p{
+    font-family: 'Open Sans', sans-serif;  
+}
+h2{
+    font-family: 'Nunito', sans-serif;
+}
+h1{
+    font-family: 'Nunito', sans-serif;
+}
+h4{
+    font-family: 'Nunito', sans-serif;   
+}
+.row{
+text-align: center;
+color:  #183B59;
+   
+}

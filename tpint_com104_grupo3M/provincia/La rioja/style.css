@@ -1,0 +1,242 @@
+:root {
+    --dark-blue-color: #183B59;
+    --light-blue-color: #5F8BA6;
+    --yellow-color: #D9B23D;
+    --orange-color: #BF8F3A;
+    --grey-color: #BFBFBF;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    max-width: 1168px;
+    margin: 0 auto;
+}
+
+/* Buttons */
+
+.btn {
+    padding: 16px;
+    border-radius: 8px;
+    color: #ffff;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+}
+
+.btn.icon {
+    background: var(--dark-blue-color);
+}
+
+.btn.blue {
+    background: var(--dark-blue-color);
+}
+
+.btn.login-icon::before {
+    content: url(images/login-btn.svg);
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+}
+
+.btn.login-icon {
+    padding-left: 40px;
+}
+
+/* Body */
+
+body {
+    background-image: url(images/BG.png);
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Header */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 1168px;
+    top: 8px;
+    z-index: 100;
+}
+
+nav .logo {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 40px;
+    color: #000000;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li a {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Hero section */
+
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+}
+
+.hero-section .top {
+    width: auto
+}
+
+.hero-section .top .images-icons img {
+    max-width: 100%;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.hero-section .top h1 {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 64px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+    margin-top: 64px;
+    text-align: center;
+}
+
+.hero-section .top p {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 16px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.images-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.images-icons div {
+    margin: 24px;
+    text-align: center;
+}
+
+.images-icons h3 {
+    margin-top: 24px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 24px;
+    color: #FFFFFF;
+    line-height: 8px;
+}
+
+.images-icons h4 {
+    font-family: 'Open Sans';
+    font-weight: 200;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 8px;
+}
+
+.hero-section .bottom {
+    background-image: url(images/BG\ 2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+}
+
+.hero-section .bottom p {
+    margin-bottom: 40px;
+    font-family: 'Open Sans';
+    font-weight: 200;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+/* Destacado */
+
+.destacado-section {
+    background-color: #5F8BA6;
+    background-position: center;
+    background-position: cover;
+}
+
+.destacado-section h2 {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 56px;
+    color: #000000;
+}
+
+.place-card {
+    display: inline-flex;
+    margin: 4px;
+    align-items: center;
+}
+  
+  .content {
+    position: relative;
+    text-align: left;
+}
+  
+  .content img {
+    width: 373px;
+}
+  
+  .info {
+    width: 373px;
+    background-color: #5F8BA6;
+    padding: 24px;
+}
+  
+  .info h3 {
+    font-size: 24px;
+}
+  
+  .info p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.contacto-section {
+    background-color: #5F8BA6;
+    background-position: center;
+    background-position: cover;
+}
